@@ -1,0 +1,32 @@
+<!-- Code from d3-graph-gallery.com -->
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+<link href="map.css" rel="stylesheet">
+
+<body>
+    <header>
+        <h1>World Press Freedom Index, 2020-2021</h1>
+        <h2 class="year"></h2>
+        <form id="form">
+            <input type="radio" name="year" value="2020" checked="checked">2020<br>
+            <input type="radio" name="year" value="2021">2021<br>
+
+        </form>
+
+    </header>
+
+
+
+    <svg id="my_dataviz"></svg>
+    <p class="source">Source: Reporters without borders. <a href="https://rsf.org/en/detailed-methodology" target="_blank">Checkout for more Information</a><br/> DataViz Hanna Zuellig</p>
+
+    <script src="map.js"></script>
+</body>
+
+</html>

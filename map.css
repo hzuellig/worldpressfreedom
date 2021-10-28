@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+#my_dataviz {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 50;
+    top: 0;
+}
+
+header {
+    position: absolute;
+    z-index: 100;
+    margin: 1rem;
+}
+
+h1,
+h2 {
+    font-weight: 600;
+    margin: 0.5rem;
+}
+
+ :root {
+    --form-control-color: rgb(24, 101, 146);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    background-color: white;
+}
+
+input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: var(--form-background);
+    /* Not removed via appearance */
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]:last-of-type {
+    margin-left: 1rem;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: white;
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+}
+
+.tooltip {
+    position: absolute;
+    padding: 7px;
+    font-size: 0.9em;
+    pointer-events: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -moz-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+    z-index: 120;
+}
+
+.tooltip p {
+    margin: 0;
+    padding: 0;
+}
+
+.tooltip table {
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+p.source {
+    position: absolute;
+    z-index: 100;
+    bottom: 20px;
+    margin: 10px 0px 0px 0px;
+    font-size: 10px;
+}
+
+a {
+    color: var(--form-control-color)
+}
